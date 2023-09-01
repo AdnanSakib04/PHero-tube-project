@@ -191,5 +191,13 @@ const handleSortByView = async () => {
     }
 
 }
+
+function goToBlog(){
+    location.href = "blog.html";
+}
+
+function goToPHTube(){
+    location.href = "index.html";
+}
 handleCategory();
 handleLoadCategory('1000');
