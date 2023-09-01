@@ -192,11 +192,11 @@ const handleSortByView = async () => {
 
 }
 
-function goToBlog(){
+const goToBlog = ()=>{
     location.href = "blog.html";
 }
 
-function goToPHTube(){
+const goToPHTube = ()=>{
     location.href = "index.html";
 }
 handleCategory();
