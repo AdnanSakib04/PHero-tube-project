@@ -14,15 +14,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-    <style>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/299b1b22e2.js" crossorigin="anonymous"></script>
+
+    <!-- <style>
         .font-inter {
             font-family: 'Inter', sans-serif;
         }
-    </style>
+    </style> -->
 </head>
 
-<body class=".font-inter">
-    <header class="mt-0 md:mt-5 ">
+<body class="">
+    <header class="mt-0  md:mt-5 max-w-[1320px] mx-auto  border border-red-600">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -64,20 +67,66 @@
       </div> -->
     </header>
 
-    <main>
-        <div class="mt-0 md:mt-4">
-            <hr>
-        </div>
-
-        <div>
-            <div id="tabs-container" class="mt-8  tabs  flex justify-center gap-6">
-                <!-- <a class="btn w-[104px] tab bg-[#25252526]">Tab 1</a>
-                <a class="btn w-[104px] tab bg-[#25252526]">Tab 1</a>
-                <a class="btn w-[104px] tab bg-[#25252526]">Tab 1</a>
-                <a class="btn w-[104px] tab bg-[#25252526]">Tab 1</a> -->
-       
+    <main class="max-w-[1320px] mx-auto ">
+        <section>
+            <div class="mt-0 md:mt-4">
+                <hr>
             </div>
-        </div>
+        </section>
+
+        <!-- tabs section -->
+        <section>
+            <div>
+                <div id="tabs-container" class="mt-8  tabs  flex justify-center  gap-6 mx-auto">
+                    <!-- <a class="btn w-[104px] tab bg-[#25252526]">Tab 1</a>
+                    <a class="btn w-[104px] tab bg-[#25252526]">Tab 1</a>
+                    <a class="btn w-[104px] tab bg-[#25252526]">Tab 1</a>
+                    <a class="btn w-[104px] tab bg-[#25252526]">Tab 1</a> -->
+
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-8 mb-16">
+            <div id="cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-5  border border-red-600">
+            <!-- <div id="cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  mx-auto   border border-red-600"> -->
+                <!-- card 1 -->
+                <!-- <div class="card card-compact w-[312px] h-[300px] bg-base-100 shadow-xl relative">
+                    <figure><img  src="https://i.ibb.co/hdtZYbB/enchnting.jpg" alt="" /></figure>
+                    <div class="p-1 my-2">
+
+                        <div class="flex flex-row gap-3">
+                           
+                            <div class="relative ">
+                                <img class="w-[40px] h-[40px] rounded-full" src="https://i.ibb.co/jh1q2F3/shopia.jpg" alt="">
+                               <div class="absolute  -mt-[88px] left-[184px]">
+                                <p class="text-white bg-black text-center p-1 w-[110px] text-xs">3hrs 56 min ago</p>
+                               </div>
+                            </div>
+
+                           
+                            <div class="flex-1">
+                                <h2 class="text-lg font-bold">Beyond The Pale</h2>
+                                <div class="my-2">
+                                    <p class="inline-block">Jim Gaffigan</p>
+                                    <i class="fa-solid text-blue-500 fa-circle-check ml-2"></i>
+                                </div>
+                                <p>2.6K views</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                
+            </div>
+
+            <!-- no content found section -->
+            <div id="no-content-container">
+                <!-- <div class=" max-w-2xl  text-center flex flex-col justify-center items-center mx-auto">
+                    <img class="mt-32 md:mt-48 w-[140px]" src="./images/icon.png" alt="">
+                    <h1 class="text-3xl mt-8 font-bold">Oops!! Sorry, There is no <br> content here</h1>
+                </div> -->
+            </div>
+        </section>
     </main>
 
     <footer>
