@@ -54,14 +54,14 @@ const handleLoadCategory = async (id) => {
             cardDiv.innerHTML = `
             <!-- card 1 -->
             <div class="card card-compact w-[312px] h-[300px] bg-base-100  relative">
-                <figure class="rounded-lg"><img  src="${x.thumbnail}" alt="" /></figure>
+                <figure class="rounded-lg"><img class="w-[312px]  h-[200px]" src="${x?.thumbnail}" alt="" /></figure>
                 <div class="p-1 my-2">
     
                     <div class="flex flex-row gap-3">
                         <!-- profile picture -->
                         <div class="relative ">
-                            <img class="w-[40px] h-[40px] rounded-full" src="${x.authors[0].profile_picture}" alt="">
-                            ${x.others.posted_date ? `<div class="absolute  -mt-[88px] left-[156px]">
+                            <img class="w-[40px] h-[40px] rounded-full" src="${x?.authors[0]?.profile_picture}" alt="">
+                            ${x?.others?.posted_date ? `<div class="absolute  -mt-[88px] left-[156px]">
                             <p class="text-white bg-[#171717] text-center p-1 w-[140px] text-xs">${hours}hrs ${mins} min ago</p>
                            </div>` : ''}
                            
@@ -69,12 +69,12 @@ const handleLoadCategory = async (id) => {
     
                         <!-- card description -->
                         <div class="flex-1">
-                            <h2 class="text-lg font-bold">${x.title}</h2>
+                            <h2 class="text-lg font-bold">${x?.title}</h2>
                             <div class="my-2">
-                                <p class="inline-block">${x.authors[0].profile_name}</p>
-                                <span>${x.authors[0].verified ? `<i class="fa-solid text-blue-500 fa-circle-check ml-2"></i>` : ''}</span>
+                                <p class="inline-block">${x?.authors[0]?.profile_name}</p>
+                                <span>${x?.authors[0]?.verified ? `<i class="fa-solid text-blue-500 fa-circle-check ml-2"></i>` : ''}</span>
                             </div>
-                            <p>${x.others.views} views</p>
+                            <p>${x?.others?.views} views</p>
                         </div>
                     </div>
                 </div>
@@ -149,14 +149,14 @@ const handleSortByView = async () => {
             cardDiv.innerHTML = `
             <!-- card 1 -->
             <div class="card card-compact w-[312px] h-[300px] bg-base-100  relative">
-                <figure class="rounded-lg"><img  src="${x.thumbnail}" alt="" /></figure>
+                <figure class="rounded-lg"><img class="w-[312px]  h-[200px]" src="${x?.thumbnail}" alt="" /></figure>
                 <div class="p-1 my-2">
     
                     <div class="flex flex-row gap-3">
                         <!-- profile picture -->
                         <div class="relative ">
-                            <img class="w-[40px] h-[40px] rounded-full" src="${x.authors[0].profile_picture}" alt="">
-                            ${x.others.posted_date ? `<div class="absolute  -mt-[88px] left-[156px]">
+                            <img class="w-[40px] h-[40px] rounded-full" src="${x?.authors[0]?.profile_picture}" alt="">
+                            ${x?.others?.posted_date ? `<div class="absolute  -mt-[88px] left-[156px]">
                             <p class="text-white bg-[#171717] text-center p-1 w-[140px] text-xs">${hours}hrs ${mins} min ago</p>
                            </div>` : ''}
                            
@@ -164,12 +164,12 @@ const handleSortByView = async () => {
     
                         <!-- card description -->
                         <div class="flex-1">
-                            <h2 class="text-lg font-bold">${x.title}</h2>
+                            <h2 class="text-lg font-bold">${x?.title}</h2>
                             <div class="my-2">
-                                <p class="inline-block">${x.authors[0].profile_name}</p>
-                                <span>${x.authors[0].verified ? `<i class="fa-solid text-blue-500 fa-circle-check ml-2"></i>` : ''}</span>
+                                <p class="inline-block">${x?.authors[0]?.profile_name}</p>
+                                <span>${x?.authors[0]?.verified ? `<i class="fa-solid text-blue-500 fa-circle-check ml-2"></i>` : ''}</span>
                             </div>
-                            <p>${x.others.views} views</p>
+                            <p>${x?.others?.views} views</p>
                         </div>
                     </div>
                 </div>
