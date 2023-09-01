@@ -17,15 +17,15 @@
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/299b1b22e2.js" crossorigin="anonymous"></script>
 
-    <!-- <style>
+    <style>
         .font-inter {
             font-family: 'Inter', sans-serif;
         }
-    </style> -->
+    </style>
 </head>
 
-<body class="">
-    <header class="mt-0  md:mt-5 max-w-[1320px] mx-auto  border border-red-600">
+<body class="font-inter">
+    <header class="mt-0  md:mt-5 max-w-[1320px] mx-auto">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -38,7 +38,7 @@
                     </label>
                     <ul tabindex="0"
                         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Sort by view</a></li>
+                        <li><a onclick="handleSortByView()">Sort by view</a></li>
                     </ul>
                 </div>
                 <img src="./images/logo.png" alt="">
@@ -88,7 +88,7 @@
         </section>
 
         <section class="mt-8 mb-16">
-            <div id="cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-5  border border-red-600">
+            <div id="cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-5 gap-y-6">
             <!-- <div id="cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  mx-auto   border border-red-600"> -->
                 <!-- card 1 -->
                 <!-- <div class="card card-compact w-[312px] h-[300px] bg-base-100 shadow-xl relative">

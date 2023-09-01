@@ -9,7 +9,7 @@ const handleCategory = async () => {
     data.data.forEach((category) => {
         const div = document.createElement('div');
         div.innerHTML = `
-        <a onclick="handleLoadCategory('${category.category_id}')" class="btn w-[104px] tab bg-[#25252526]">${category.category}</a>
+        <a onclick="handleLoadCategory('${category.category_id}')" class="btn text-[#252525B3] tab bg-[#25252526]">${category.category}</a>
         `;
         tabsContainer.appendChild(div);
 
@@ -53,16 +53,16 @@ const handleLoadCategory = async (id) => {
             const cardDiv = document.createElement('div');
             cardDiv.innerHTML = `
             <!-- card 1 -->
-            <div class="card card-compact w-[312px] h-[300px] bg-base-100 shadow-xl relative">
-                <figure><img  src="${x.thumbnail}" alt="" /></figure>
+            <div class="card card-compact w-[312px] h-[300px] bg-base-100  relative">
+                <figure class="rounded-lg"><img  src="${x.thumbnail}" alt="" /></figure>
                 <div class="p-1 my-2">
     
                     <div class="flex flex-row gap-3">
                         <!-- profile picture -->
                         <div class="relative ">
                             <img class="w-[40px] h-[40px] rounded-full" src="${x.authors[0].profile_picture}" alt="">
-                            ${x.others.posted_date ? `<div class="absolute  -mt-[88px] left-[166px]">
-                            <p class="text-white bg-[#171717] text-center p-1 w-[130px] text-xs">${hours}hrs ${mins} min ago</p>
+                            ${x.others.posted_date ? `<div class="absolute  -mt-[88px] left-[156px]">
+                            <p class="text-white bg-[#171717] text-center p-1 w-[140px] text-xs">${hours}hrs ${mins} min ago</p>
                            </div>` : ''}
                            
                         </div>
@@ -148,16 +148,16 @@ const handleSortByView = async () => {
             const cardDiv = document.createElement('div');
             cardDiv.innerHTML = `
             <!-- card 1 -->
-            <div class="card card-compact w-[312px] h-[300px] bg-base-100 shadow-xl relative">
-                <figure><img  src="${x.thumbnail}" alt="" /></figure>
+            <div class="card card-compact w-[312px] h-[300px] bg-base-100  relative">
+                <figure class="rounded-lg"><img  src="${x.thumbnail}" alt="" /></figure>
                 <div class="p-1 my-2">
     
                     <div class="flex flex-row gap-3">
                         <!-- profile picture -->
                         <div class="relative ">
                             <img class="w-[40px] h-[40px] rounded-full" src="${x.authors[0].profile_picture}" alt="">
-                            ${x.others.posted_date ? `<div class="absolute  -mt-[88px] left-[166px]">
-                            <p class="text-white bg-[#171717] text-center p-1 w-[130px] text-xs">${hours}hrs ${mins} min ago</p>
+                            ${x.others.posted_date ? `<div class="absolute  -mt-[88px] left-[156px]">
+                            <p class="text-white bg-[#171717] text-center p-1 w-[140px] text-xs">${hours}hrs ${mins} min ago</p>
                            </div>` : ''}
                            
                         </div>
