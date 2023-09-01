@@ -41,6 +41,12 @@ const handleLoadCategory = async (id) => {
             console.log(x.others.views);
             console.log(x.others.posted_date);
 
+            // calculating the hours and minute
+            let totalSeconds = x.others.posted_date;
+            const hours = parseInt(totalSeconds / 3600);
+            totalSeconds = totalSeconds% 3600;
+            const mins = parseInt(totalSeconds / 60);
+
             const cardDiv = document.createElement('div');
             cardDiv.innerHTML = `
             <!-- card 1 -->
@@ -52,9 +58,10 @@ const handleLoadCategory = async (id) => {
                         <!-- profile picture -->
                         <div class="relative ">
                             <img class="w-[40px] h-[40px] rounded-full" src="${x.authors[0].profile_picture}" alt="">
-                           <div class="absolute  -mt-[88px] left-[184px]">
-                            <p class="text-white bg-black text-center p-1 w-[110px] text-xs">3hrs 56 min ago</p>
-                           </div>
+                            ${x.others.posted_date? `<div class="absolute  -mt-[88px] left-[166px]">
+                            <p class="text-white bg-[#171717] text-center p-1 w-[130px] text-xs">${hours}hrs ${mins} min ago</p>
+                           </div>` : ''}
+                           
                         </div>
     
                         <!-- card description -->
@@ -62,7 +69,7 @@ const handleLoadCategory = async (id) => {
                             <h2 class="text-lg font-bold">${x.title}</h2>
                             <div class="my-2">
                                 <p class="inline-block">${x.authors[0].profile_name}</p>
-                                <span>${x.authors[0].verified ? x.authors[0].verified : ''}<i class="fa-solid text-blue-500 fa-circle-check ml-2"></i></span>
+                                <span>${x.authors[0].verified ? `<i class="fa-solid text-blue-500 fa-circle-check ml-2"></i>` : ''}</span>
                             </div>
                             <p>${x.others.views} views</p>
                         </div>
