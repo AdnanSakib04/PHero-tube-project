@@ -97,3 +97,4 @@ const handleLoadCategory = async (id) => {
 
 }
 handleCategory();
+handleLoadCategory('1000');
